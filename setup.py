@@ -45,9 +45,9 @@ extra_link_args = []
 extra_objects = []
 include_dirs = [numpy.get_include()]
 if platform.system() == 'Darwin':
-    include_dirs += ['/usr/local/opt/jpeg-turbo/include/']
+    include_dirs += ['/usr/local/opt/jpeg-turbo/include/', '/opt/local/include/', '/opt/libjpeg-turbo/include/']
     libs += ['turbojpeg']
-    library_dirs += ['/usr/local/opt/jpeg-turbo/lib/']
+    library_dirs += ['/usr/local/opt/jpeg-turbo/lib/', '/opt/local/lib', '/opt/libjpeg-turbo/lib']
     libs += ['avutil', 'avformat', 'avcodec', 'swscale']
 elif platform.system() == 'Linux':
     libs = ['rt', 'turbojpeg']
